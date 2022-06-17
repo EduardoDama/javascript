@@ -14,13 +14,20 @@
     </style>
 </head>
 <body>
-    <h1>iniciando os estudos em <strong>DOM</strong> em JS</h1>
-    <p>Aqui vai o resultado</p>
-    <div>Clique em mim</div>
+    <h1 name='titulo'>iniciando os estudos em <strong>DOM</strong> em JS</h1>
+    <p class='teste'>Aqui vai o resultado</p>
+    <p>Muito feliz em aprender o <strong>DOM</strong></p>
+    <div id="msg">Clique em mim</div>
     <script>
-        document.writeln('olá, mundo!')
-        var n1 = document.getElementsByTagName(p)
-        document.writeln(n1) 
+        var p1 = document.getElementsByTagName('p')[1]
+        document.write(p1.innerText)
+        var m = document.getElementById('msg')
+        var msg = document.getElementsByName('titulo')[0]
+        msg.innerText = 'Nada de mais'
+        var triste = document.getElementsByClassName('teste')[0]
+        triste.innerHTML = 'AAAAAAAAAAAAAAAAAAAA'
+        var d = document.querySelector('#msg')
+        d.style.color = 'black'
     </script>
 </body>
 </html>
