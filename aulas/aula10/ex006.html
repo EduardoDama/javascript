@@ -18,19 +18,26 @@
     </style>
 </head>
 <body>
-    <div id="area" onmouseenter="clicar()" onmouseout="saiu()">
+    <div id="area" onmouseenter="entrou()" onmouseout="saiu()" onclick="clicar()" onmousedown="pressionar()">
         interaja...
     </div>
     <script>
-        function clicar(){
-            var p = document.getElementById('area')
+        var p = document.getElementById('area')
+        function entrou(){
             p.style.backgroundColor = 'blue'
-            p.innerText = 'Boaaa, vc usou o JS para mudar a cor!'
+            p.innerText = 'entrou'
         }
         function saiu(){
-            var p = document.getElementById('area')
             p.style.backgroundColor = 'rgb(50, 252, 0)'
             p.innerText = 'Interaja...'
+        }
+        function clicar(){
+            p.innerText = 'Clicou'
+            p.style.backgroundColor = 'red'
+        }
+        function pressionar(){
+            p.innerText = 'pressionou'
+            p.style.backgroundColor = 'violet'
         }
     </script>
 </body>
