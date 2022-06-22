@@ -7,7 +7,7 @@
     <title>Eventos DOM</title>
     <style>
         div{
-            background-color: rgb(50, 252, 0);
+            background-color: rgb(89, 190, 64);
             width: 200px;
             height: 200px;
             line-height: 200px;
@@ -18,18 +18,22 @@
     </style>
 </head>
 <body>
-    <div id="area" onmouseenter="entrou()" onmouseout="saiu()" onclick="clicar()" onmousedown="pressionar()">
+    <div id="area" >
         interaja...
     </div>
     <script>
         var p = document.getElementById('area')
-        function entrou(){
+        p.addEventListener('mouseenter', entrou)
+        p.addEventListener('mouseout', saiu)
+        p.addEventListener('click', clicar)
+        p.addEventListener('mousedown', pressionar)
+      function entrou(){
             p.style.backgroundColor = 'blue'
             p.innerText = 'entrou'
         }
         function saiu(){
-            p.style.backgroundColor = 'rgb(50, 252, 0)'
-            p.innerText = 'Interaja...'
+            p.style.backgroundColor = 'rgb(89, 190, 64)'
+            p.innerText = 'saíu...'
         }
         function clicar(){
             p.innerText = 'Clicou'
