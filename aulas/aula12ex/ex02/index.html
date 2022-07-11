@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hora do dia</title>
+    <title>Verificador de idade</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,9 +15,12 @@
     <section>
         <div>Ano de nascimento <input type="number" name="" id="nas"></div>
 
-        <div>sexo <input type="checkbox" name="" id="">Masculino <input type="checkbox" name="" id="">Femino</div>
+        <div>sexo
+        <input type="radio" name="sex" id="masc" value="male" > Masculino
+        <input type="radio" name="sex" id="femi" value="famale" > Feminino
 
-        <div><input type="button" value="Verificar"></div>
+        <div><input type="button" value="Verificar" onclick="verificar()"></div>
+
     </section>
 
     <footer>

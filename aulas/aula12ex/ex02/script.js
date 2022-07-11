@@ -1,5 +1,16 @@
 var agora = new Date()
 var ano = agora.getFullYear()
 
-var nas = document.getElementById('nas')
-console.log(nas.typeof)
+
+function verificar(){
+    var nas = document.getElementById('nas')
+    var n1 = Number(nas.value)
+    var idade = ano - n1
+
+    var resp = document.getElementsByName('sex')
+    document.write(sexo)
+
+
+
+ 
+}
