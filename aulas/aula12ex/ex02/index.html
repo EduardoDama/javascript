@@ -13,18 +13,25 @@
     </header>
 
     <section>
-        <div>Ano de nascimento <input type="number" name="" id="nas"></div>
+        <div><p>Ano de nascimento <input type="number" name="" id="nas"></p></div>
 
-        <div>sexo
-        <input type="radio" name="sex" id="masc" value="male" > Masculino
-        <input type="radio" name="sex" id="femi" value="famale" > Feminino
+        <div><p>
+            sexo:
+            <input type="radio" name="sex" id="masc"checked >
+            <label for="masc">Masculino</label>
+            <input type="radio" name="sex" id="femi" >
+            <label for="femi">Feminino</label>
+        </p>
 
-        <div><input type="button" value="Verificar" onclick="verificar()"></div>
+        <p><input type="button" value="Verificar" onclick="verificar()"></p>
 
+        <div id="resp">
+            <p>Preencha os dados do formulario para ver o resultado!</p>
+        </div>
     </section>
 
     <footer>
-        <p>Eduardo Damasceno </p>
+        <p>&copy; Eduardo Damasceno </p>
     </footer>
     
     <script src="script.js"></script>
