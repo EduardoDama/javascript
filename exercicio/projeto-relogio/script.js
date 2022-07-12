@@ -8,14 +8,17 @@ const relogio = setInterval(function time() {
     var horaN = agora.getHours()
     var minutosN = agora.getMinutes()
     var secondsN = agora.getSeconds()
-
-    hora.innerHTML = horaN
+    
+    if(horaN < 10){
+        horaN = '0' + horaN
+    }
     if(minutosN < 10){
         minutosN = '0' + minutosN
     }
     if(secondsN < 10){
         secondsN = '0' + secondsN
     }
+    hora.innerHTML = horaN
     minuto.innerHTML = minutosN
     segundos.innerHTML = secondsN
 })
