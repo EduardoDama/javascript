@@ -4,7 +4,9 @@ div{
     font-size: 5em;
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
-    font-family: 'Roboto Mono', monospace;        }
+    font-family: 'Roboto Mono', monospace;        
+
+}
 /*#horas::after{
     content: ':';
 }
