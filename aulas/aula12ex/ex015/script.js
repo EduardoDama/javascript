@@ -2,7 +2,6 @@ var agora = new Date()
 var ano = agora.getFullYear()
 
 
-
 function verificar(){
     var resp = document.getElementById('resp')
     var nas = document.getElementById('nas')
@@ -14,6 +13,7 @@ function verificar(){
     if(n1 > ano || nas.value.length == 0){
         alert('Número invalido [ERRO]')
     }
+
     else{
         var sexo = document.getElementsByName('sex')
         var idade = ano - n1
@@ -34,7 +34,7 @@ function verificar(){
                 img.setAttribute ('src', 'imagens/idosoM.jpg')
             }
         }
-        else{
+        else if(sexo[1].checked){
             var gene = 'Mulher'
 
             if(idade < 11){
@@ -51,16 +51,6 @@ function verificar(){
             }
         }
         resp.innerHTML = `Detectamos ${gene} com ${idade} anos`
-        resp.appendChild(img)
-
-
-
-        
+        resp.appendChild(img)   
     }
-
-    
-
-
-
- 
 }
