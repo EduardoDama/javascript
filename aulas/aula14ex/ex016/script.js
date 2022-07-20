@@ -1,4 +1,4 @@
-
+var c = 1
 function contar() {
 
     var inicio = document.getElementById('ini')
@@ -11,12 +11,17 @@ function contar() {
     var pasN = Number(passo.value)
     var resul = document.createElement('div')
 
+    resp.firstElementChild.remove()
+    if(c == 1){
+         resp.append('contando')
+    }
+   
 
     for (iniN; iniN <= fimN; iniN += pasN) {
         resul.append(iniN)
-        resul.append(' -> ')
+        resul.append(' 👉 ')
     }
-    resul.lastChild.remove()
+    resul.append('🏁')
     resp.appendChild(resul) 
     c++
     
