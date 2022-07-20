@@ -19,9 +19,5 @@ function contar() {
         }
         document.getElementById('msg').innerText = 'contando...'
         resp.lastElementChild.appendChild(resul).append('🏁') 
-    }
-
-
-    
-    
+    }   
 }
