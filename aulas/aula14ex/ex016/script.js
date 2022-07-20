@@ -1,28 +1,27 @@
-var c = 1
 function contar() {
-
-    var inicio = document.getElementById('ini')
-    var fim = document.getElementById('fim')
-    var passo = document.getElementById('pas')
+    var iniN = Number(document.getElementById('ini').value)
+    var fimN = Number(document.getElementById('fim').value)
+    var pasN = Number(document.getElementById('pas').value)
     var resp = document.getElementById('resp')
-
-    var iniN = Number(inicio.value)
-    var fimN = Number(fim.value)
-    var pasN = Number(passo.value)
     var resul = document.createElement('div')
 
-    resp.firstElementChild.remove()
-    if(c == 1){
-         resp.append('contando')
+    if(pasN == 0){
+        alert('[ERRO] passo 0, considerando passo 1')
+        pasN = 1
     }
-   
 
-    for (iniN; iniN <= fimN; iniN += pasN) {
-        resul.append(iniN)
-        resul.append(' 👉 ')
+    if(iniN == 0 || fimN == 0){
+        alert('[ERRO] valor precisa ser digitado')
     }
-    resul.append('🏁')
-    resp.appendChild(resul) 
-    c++
+    else{
+        for (iniN; iniN <= fimN; iniN += pasN) {
+            resul.append(iniN + ' 👉 ')
+        }
+        document.getElementById('msg').innerText = 'contando...'
+        resp.lastElementChild.appendChild(resul).append('🏁') 
+    }
+
+
+    
     
 }
