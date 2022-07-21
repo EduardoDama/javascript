@@ -1,6 +1,6 @@
 function gerar(){
     var num = document.getElementById('n1').value
-    var resp = document.getElementById('resp')
+    var resp = document.getElementById('r')
     resp.innerHTML = ''
 
     if(num.length == 0){
@@ -13,5 +13,10 @@ function gerar(){
             resp.appendChild(option)
         }
     }
+
 }
 
+
+    let vaga = ['Eduardo', 'Damasceno', 'Lima ', 'Fernanda', 'Damasceno']
+
+    console.log(vaga)
