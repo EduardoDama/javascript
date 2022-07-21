@@ -10,8 +10,9 @@ function contar() {
         pasN = 1
     }
 
-    if(iniN == 0 || fimN == 0){
-        alert('[ERRO] valor precisa ser digitado')
+    if(iniN.length == 0 || fimN.length == 0){
+        document.getElementById('msg').innerText = 'impossível contar!'
+
     }
     else{
         if(iniN <= fimN){
