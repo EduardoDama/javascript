@@ -14,9 +14,17 @@ function contar() {
         alert('[ERRO] valor precisa ser digitado')
     }
     else{
-        for (iniN; iniN <= fimN; iniN += pasN) {
-            resul.append(iniN + ' 👉 ')
+        if(iniN <= fimN){
+            for (iniN; iniN <= fimN; iniN += pasN) {
+                resul.append(iniN + ' 👉 ')
+            }  
         }
+        else{
+            for (iniN; iniN >= fimN; iniN -= pasN) {
+                resul.append(iniN + ' 👉 ')
+            }             
+        }
+
         document.getElementById('msg').innerText = 'contando...'
         resp.lastElementChild.appendChild(resul).append('🏁') 
     }   
