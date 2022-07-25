@@ -10,7 +10,7 @@ console.log(num[4]) */
 for (let index = 0; index < num.length; index++) {
     console.log(`Na posição ${index} temos o valor ${num[index]}`)   
 }*/
- num.sort()
+num.sort()
 for(let pos in num){
     console.log(`Na posição ${pos} temos o valor ${num[pos]}`)
 
