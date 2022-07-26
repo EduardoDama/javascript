@@ -28,6 +28,6 @@ section > div:last-child{
    max-width: 150px;
 }
 
-select{
-    width: 150px;
+div{
+    width: 500px;
 }
