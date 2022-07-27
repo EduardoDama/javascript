@@ -21,29 +21,35 @@ while True:
 
     resp = int(input('Escolha uma opção: '))
 
-    if(resp < 7 and resp > 0):
+    if(resp >= 7 or resp == 0):
         print('erro')
 
     if(resp == 1):
         result = n1 + n2
+        conta = 'Soma'
 
     elif(resp == 2):
-        result = n1 - n2 
+        result = n1 - n2
+        conta = 'Subração' 
 
     elif(resp == 3):
         result = n1 * n2 
+        conta = 'Multiplicação'
 
     elif(resp == 4):
         result = n1 / n2 
+        conta = 'Divisão'
 
     elif(resp == 5):
         result = n1 % n2 
+        conta = 'Resto da divisão'
 
     elif(resp == 6):
         result = 2 / (n1 + n2)
+        conta = 'Média'
 
     else:
         print('Valor não encontrado!')
         break
 
-    print(result)
+    print(f"A {conta} entre {n1} e {n2} é {result}")
