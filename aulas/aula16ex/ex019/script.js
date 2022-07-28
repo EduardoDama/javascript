@@ -1,70 +1,108 @@
-let nuns = []
-let div = document.createElement('div')
+let alunos = []
+let max = 5
+let index = 0
 
-function adicionar() {
-    let num = document.getElementById('num')
-    let resp = document.getElementById('mostra')   
-    let option = document.createElement('option')   
-
-    const n1 = Number(num.value)
-    num.innerText = ''
-
-    if(verif(n1, nuns) == false){
-        div.innerHTML = ''
-        option.text = `Valor ${n1} adicionado`
-        nuns.push(n1)
-        resp.appendChild(option)
-    }
-    num.value = ''
-
-    num.focus()
- 
-}
-
-function verif(n, l) {
-    if(n > 100 || l.indexOf(n) != -1 || n == 0){
-    alert('Número INVALIDO, Já encontrado na lista!')
-    }else{
-        return false
-    }
-}
-
+let bo = ['nome', 'primeiro', 'segundo', 'terceiro', 'quarto', 'média']
+let resp = document.getElementById('resp')
 function calc() {
-    let soma = 0
-    let maior = 0
-    let menor = 0
+    let nome = document.getElementById('nome')
+    let pri = document.getElementById('pri')
+    let seg = document.getElementById('seg')
+    let ter = document.getElementById('ter')
+    let qua = document.getElementById('qua')
 
-    if(nuns.length == 0){
-        alert('Adicione números!')
+
+
+    no = nome.value
+    priN = Number(pri.value)
+    segN = Number(seg.value)
+    terN = Number(ter.value)
+    quaN = Number(qua.value)
+
+    nome.value = ''
+    nome.focus()
+
+    let media = (priN + segN + terN + quaN) / 4
+
+    console.log(pri.length)
+
+    if(no.length == 0 || priN == 0 || segN == 0 || terN == 0 || quaN == 0){
+        alert('Coloque valores na caixas!')
     }else{
-        for (let pos in nuns) {
-        if(maior == 0){
-            maior = nuns[pos]
-            menor = nuns[pos]
-        }else{
-            if(nuns[pos] > maior){
-                maior = nuns[pos]
-            }
-            if(nuns[pos] < menor){
-                menor = nuns[pos]
-            } 
-        }
-        soma += nuns[pos]
-        }
+        alunos.push(no)
+        alunos.push(priN)
+        alunos.push(segN)
+        alunos.push(terN)
+        alunos.push(quaN)
+        alunos.push(media.toFixed(1))
 
-        let media = soma / nuns.length
-        mostrar(soma, media, menor, maior)
+        resp.innerHTML = '' 
+    }
+
+    pri.value = ''
+    seg.value = ''
+    ter.value = ''
+    qua.value = ''
+    
+}
+
+function fim() {
+    if (alunos.length == 0) {
+        alert('Adicione valores')
+    } else {
+        mostrar(index, max)
+    }
+    
+    
+}
+
+function mostrar(i, m) {
+    resp.innerHTML = ''
+    let c = 0
+    for (i; i <= m; i++) {
+        resp.innerHTML += `<p>${bo[c]}: ${alunos[i]}</p>`  
+        c+=1      
+    }
+
+
+}
+
+function mais(){
+
+    console.log(max, alunos.length)
+
+    if (alunos.length == 0) {
+        alert('Adicione um valor')
+    }else{
+        if(max+1 == alunos.length){
+            alert('Máximo de alunos, volte para a anterior')
+        }else{
+            index += 6
+            max += 6
+
+            resp.innerHTML = ``
+
+            mostrar(index, max)
+            console.log(index, max)
+        }
     }
 }
 
-function mostrar(s, med, men, mai) {
-    let resp = document.getElementById('resp')
-    div.innerHTML = ''
-    div.innerHTML += `<p>Você adicionou ${nuns.length} Números</p>`
-    div.innerHTML += `<p>o maior número informado foi ${mai}</p>`
-    div.innerHTML += `<p>o menor número informado foi ${men}</p>`
-    div.innerHTML += `<p>a soma de todos os valores foi ${s}</p>`
-    div.innerHTML += `<p>A média dos valores informados foi ${med.toFixed(2).replace('.',',')}</p>`
+function menos(){
+    if (alunos.length == 0) {
+        alert('Adicione um valor')
+    }else{
+        if(index == 0){
+            alert('Limite da lista, vá para a próxima')
+        }else{
+            index -= 6
+            max -= 6
 
-    resp.appendChild(div)
+            resp.innerHTML = ``
+
+            mostrar(index, max)
+            console.log(index, max)
+        }
+    }
+
 }

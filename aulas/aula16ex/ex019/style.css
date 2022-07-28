@@ -20,7 +20,7 @@ section{
     border-radius: 1em;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.548);
     text-align: left;
-    max-width: 600px;
+    max-width: 370px;
     min-width: none;
     
 }
@@ -28,6 +28,19 @@ section{
 div{
     width: 500px;
 }
-select{
-    width: 140px;
+
+select input:focus{
+    width: 300px;
+
+}
+
+#pri,#seg,#ter,#qua{
+    width: 40px;
+}
+
+#add{
+    margin-left: 0.5em;
+    color: rgb(9, 46, 156);
+    font-weight: bold;
+    background-color: azure;
 }
