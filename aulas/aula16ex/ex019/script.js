@@ -30,11 +30,11 @@ function calc() {
         alert('Coloque valores na caixas!')
     }else{
         alunos.push(no)
-        alunos.push(priN)
-        alunos.push(segN)
-        alunos.push(terN)
-        alunos.push(quaN)
-        alunos.push(media.toFixed(1))
+        alunos.push(priN.toFixed(1).replace('.', ','))
+        alunos.push(segN.toFixed(1).replace('.', ','))
+        alunos.push(terN.toFixed(1).replace('.', ','))
+        alunos.push(quaN.toFixed(1).replace('.', ','))
+        alunos.push(media.toFixed(1).replace('.', ','))
 
         resp.innerHTML = '' 
     }
