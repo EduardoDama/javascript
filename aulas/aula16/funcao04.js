@@ -6,4 +6,4 @@ function fa(n) {
     return n
 }
 
-console.log(fa(15))
+console.log(fa(52))
