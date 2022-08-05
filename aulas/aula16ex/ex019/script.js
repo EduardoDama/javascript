@@ -2,7 +2,7 @@ let alunos = []
 let max = 5
 let index = 0
 
-let bo = ['nome', 'primeiro', 'segundo', 'terceiro', 'quarto', 'média']
+const bo = ['nome', 'Primeiro Bimestre', 'Segundo Bimestre', 'Terceiro Bimestre', 'Quarto Bimestre', 'Média Anual']
 let resp = document.getElementById('resp')
 function calc() {
     let nome = document.getElementById('nome')
