@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #F8F8F8;
+}
+section > p, h1{
+    margin-bottom: 15px;
+}
+.clareamento{
+    color: #9597A0;
+}
+#pequeno{
+    font-size: 12px;
+}
+.descricao{
+    font-size: 14px;
+    color: #333333;
+}
+article > p{
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+article > h2{
+    margin-bottom: 20px;
+    margin-top: 35px;
+}
+img{
+    width: 100%;
+}
+h3{
+    margin-bottom: 15px;
+}
+img{
+    display: block;
+    margin: auto;
+    max-width: 1000px;
+    min-width: 300px;  
+}
+iframe{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 450px;
+ 
+}
+main{
+    max-width: 700px;
+    min-width: none;
+    margin: auto;
+    background-color: white;
+    padding: 1.5em;
+}
+ul{
+    margin-left: 50px;
+    font-size: 20px;
+}
+ul > li{
+    margin-bottom: 15px;
+}
+.resp{
+    max-width: 1200px;
+    min-width: 100%;
+
+}
+a{
+    color: #006363;
+    font-weight: bold;
+}
+div{
+    padding-left: 20px;
+}
+div > p{
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+#tipo{
+    background-color: #FF6D0B;
+    color: white;
+    display: inline-block;
+    padding: 8px;
+    font-weight: bold;
+
+}
+
+#video > div{
+    display: inline-block;
+    padding: 0.5em;
+    margin: 0px;
+
+    border-style: solid;
+    border-color: black;
+
+}
+#video{
+    margin-left: -37px;
+    max-width: 500px;
+    margin-top: 3em;
+
+}
+
+#video > div:hover{
+    background-color: rgba(128, 128, 128, 0.356);
+}
+#v{
+    width: 100%;
+    margin-bottom: 3em;
+}
+#resp{
+    padding: 0px;
+    margin: 0px;
+    margin-left: -37px;
+}
+
+#aulas{
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.336);
+}
