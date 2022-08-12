@@ -26,7 +26,7 @@ function calc() {
 
     console.log(pri.length)
 
-    if(no.length == 0 || priN == 0 || segN == 0 || terN == 0 || quaN == 0){
+    if(no.length == 0 || pri.length == 0 || seg.length == 0 || ter.length == 0 || qua.length == 0){
         alert('Coloque valores na caixas!')
     }else{
         alunos.push(no)
