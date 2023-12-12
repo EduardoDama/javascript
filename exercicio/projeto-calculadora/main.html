@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="resultado"><span id="ad"></span></div>
+        <div onclick="number('1')" id="numeros"><div id="num">1</div></div>
+        <div onclick="number('2')" id="numeros"><div id="num">2</div></div>
+        <div onclick="number('3')" id="numeros"><div id="num">3</div></div> 
+        <div onclick="especial('+')" id="carc"><div id="num">+</div></div>
+        <div onclick="cancel()" id="numeros"><div id="num">C</div></div>
+        <br>
+        <div onclick="number('4')" id="numeros"><div id="num">4</div></div>
+        <div onclick="number('5')" id="numeros"><div id="num">5</div></div>
+        <div onclick="number('6')" id="numeros"><div id="num">6</div></div>
+        <div onclick="especial('-')" id="carc"><div id="num">-</div></div>
+        <div onclick="especial('X')" id="carc"><div id="num">X</div></div>
+        <br>
+        <div onclick="number('7')" id="numeros"><div id="num">7</div></div>
+        <div onclick="number('8')" id="numeros"><div id="num">8</div></div>
+        <div onclick="number('9')" id="numeros"><div id="num">9</div></div>
+        <div onclick="number('.')" id="carc"><div id="num">,</div></div>
+        <div onclick="especial('/')" id="carc"><div id="num">/</div></div>
+        <br>
+        <div onclick="number('0')" id="numeros"><div id="num">0</div></div>
+        
+
+
+
+        <div onclick="result()" id="res"><div id="num">=</div></div>
+
+        
+    </main>
+    <footer>Criado por: Eduardo Damasceno</footer>
+    <script src="script.js"></script>
+</body>
+</html>

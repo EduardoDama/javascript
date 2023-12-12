@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+*{
+    font-family: 'Cutive Mono', monospace;
+}
+
+div#numeros, #carc{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.404);
+    text-align: center;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 5px;
+}
+div#num{
+    margin-top: 1em;
+    margin-bottom: -1em;
+}
+
+div#numeros:hover, #carc:hover, #res:hover{
+    background-color: rgba(94, 94, 94, 0.952);
+    color: aliceblue;
+    transition-duration: 0.3s;    
+
+}
+div#resultado {
+    background-color: rgba(128, 128, 128, 0.63);
+    padding: 1em;
+    width: 220px;
+    border-radius: 10px;
+}
+div#resultado::after{
+    content: "|";
+}
+div#res{
+    width: 180px;
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.404);
+    text-align: center;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 5px;
+}
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(189, 189, 189, 0.664);
+    padding: 2em;
+    border-radius: 10px;
+    max-width: 350px;
+}
+footer{
+    text-align: center;
+    background-color: gray;
+    color: white;
+    padding: 5px;
+    margin-top: -10px;
+    width: 100%;
+}
