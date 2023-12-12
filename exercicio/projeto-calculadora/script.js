@@ -26,10 +26,10 @@ function number(num){
 function especial(esp){
     carc = esp
 
-    if(vezCar == 0){
+
     resultado.innerHTML += ` ${carc} `  
     vezCar += 1     
-    }
+
     vezNum += 1 
 
     
