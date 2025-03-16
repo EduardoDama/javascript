@@ -1,18 +1,18 @@
 <template>
 
-  <ComputedProperties></ComputedProperties>
+  <OberservadoresVue></OberservadoresVue>
 
  
 </template>
 
 <script>
 
-import ComputedProperties from './components/ComputedProperties.vue';
+import OberservadoresVue from './components/OberservadoresVue.vue';
 
 export default {
   name: 'App',
   components: {
-    ComputedProperties
+    OberservadoresVue
   },
   data(){
 
