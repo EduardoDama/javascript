@@ -1,18 +1,18 @@
 <template>
 
-  <OberservadoresVue></OberservadoresVue>
+  <CiclodeVida></CiclodeVida>
 
  
 </template>
 
 <script>
 
-import OberservadoresVue from './components/OberservadoresVue.vue';
+import CiclodeVida from './components/CiclodeVida.vue';
 
 export default {
   name: 'App',
   components: {
-    OberservadoresVue
+    CiclodeVida
   },
   data(){
 

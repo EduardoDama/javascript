@@ -7,9 +7,10 @@
   <div> 
      <input type="text" placeholder="Primeiro Nome" v-model="user.primeiroNome"> <br>
   </div>
+
   <div> 
-     <input type="text" placeholder="Último Nome" v-modDel="user.segundoNome"> <br>
-     {{ user.primeiroNome }}{{ user.segundoNome }}
+     <input type="text" placeholder="Último Nome" v-model="user.segundoNome"> <br>
+     {{ user.primeiroNome }} {{ user.segundoNome }}
   </div>
 
 </template>
