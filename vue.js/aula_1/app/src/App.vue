@@ -1,23 +1,36 @@
 <template>
 
-  <CSSGlobalScoped>
-  </CSSGlobalScoped>
+  <BaseAlertEmit 
+    v-if="showAlert"
+    :variant="resposta"
+    :value="resposta === 'fail' ? 'Formulário não foi mandado' : 'formulário enviado com sucesso'" 
+    @close="close()" 
+  />
 
-  <h1 class="cartao">aiiiiii</h1>
  
 </template>
 
 <script>
 
-import CSSGlobalScoped from '@/components/CSSGlobalScoped.vue';
+import BaseAlertEmit from '@/components/BaseAlertEmit.vue';
 
 export default {
   name: 'App',
   components: {
-    CSSGlobalScoped
+    BaseAlertEmit
   },
   data(){
-
+    return{
+      showAlert: true,
+      resposta: 'success',
+      msg: ""
+    }
+  },
+  methods: {
+    close () {
+      this.showAlert = false
+      console.log('Fechando!')
+    }
   }
 }
 
