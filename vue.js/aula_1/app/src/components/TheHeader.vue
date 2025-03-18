@@ -16,8 +16,28 @@ export default{
         listNames: ["Eduardo", "Macaco", "Girafa", "Fernando", "Margarida"],
         titulo: false,
         styleH1: { color: "black", backgroundColor: "red" }
+        }    
+    },
+    mounted () {
+        window.addEventListener('resize', this.redimencionar)
+    },
+    beforeUnmount () {
+        console.log('Antes de desmomntar')
+        console.log('acesso a propriedade: ', this.name)
+        console.log('acesso ao DOM: ', this.$el)
+            
+    },
+    unmounted () {
+        console.log('Desmontado')
+        console.log('acesso a propriedade: ', this.name)
+        console.log('acesso ao DOM: ', this.$el)
+        window.removeEventListener('resize', this.redimencionar)
+    },
+    methods: {
+        redimencionar (evento) {
+            console.log(evento)
         }
-  }
+    }
 }
 </script>
 

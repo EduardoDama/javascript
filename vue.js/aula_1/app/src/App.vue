@@ -1,18 +1,20 @@
 <template>
 
-  <CiclodeVida></CiclodeVida>
+  <CSSGlobalScoped>
+  </CSSGlobalScoped>
 
+  <h1 class="cartao">aiiiiii</h1>
  
 </template>
 
 <script>
 
-import CiclodeVida from './components/CiclodeVida.vue';
+import CSSGlobalScoped from '@/components/CSSGlobalScoped.vue';
 
 export default {
   name: 'App',
   components: {
-    CiclodeVida
+    CSSGlobalScoped
   },
   data(){
 
