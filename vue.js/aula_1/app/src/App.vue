@@ -1,6 +1,6 @@
 <template>
 
-  <BaseAlertEmit 
+  <VueRouter 
     v-if="showAlert"
     :variant="resposta"
     :value="resposta === 'fail' ? 'Formulário não foi mandado' : 'formulário enviado com sucesso'" 
@@ -12,12 +12,12 @@
 
 <script>
 
-import BaseAlertEmit from '@/components/BaseAlertEmit.vue';
+import VueRouter from '@/components/VueRouter.vue';
 
 export default {
   name: 'App',
   components: {
-    BaseAlertEmit
+    VueRouter
   },
   data(){
     return{
