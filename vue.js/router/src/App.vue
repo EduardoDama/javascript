@@ -2,7 +2,8 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link :to="linkAbout">About</router-link> |
-    <router-link :to="linkContact">Contact</router-link>
+    <router-link :to="linkContact">Contact</router-link> |
+    <router-link to="/user/23">Usuário</router-link>
   </nav>
   <router-view/>
 </template>
