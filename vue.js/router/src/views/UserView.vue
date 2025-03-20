@@ -1,6 +1,6 @@
 <template>
     <div>
-        Usuário {{ $route.query.name}}
+        Usuário {{ $route.params.id}}
     </div> <br> <br> 
     <div>
         Fazer login <br>
