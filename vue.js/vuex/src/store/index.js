@@ -1,4 +1,3 @@
-import { resolve } from 'core-js/fn/promise'
 import { createStore } from 'vuex'
 
 export default createStore({
@@ -59,14 +58,14 @@ export default createStore({
     }
   },
   actions: {
-    storeUser() {
-      return new Promise((resolve) => { // Adiciona resolve como parâmetro
+    storeUser(store, data) {
+      return new Promise((resolve) => {
         setTimeout(() => {
-          resolve() // Agora resolve está definido
-          console.log('Usuário logado')
-          
-        }, 3000)
-      })
+          store.commit('storeUser', data); 
+          resolve(); 
+          console.log('Usuário logado');
+        }, 3000);
+      });
     }
   },
   modules: {

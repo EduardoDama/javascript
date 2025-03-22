@@ -5,6 +5,7 @@
 <script>
 import MutationsTest from './components/MutationsTest.vue';
 
+
 export default {
   name: 'App',
   components: {

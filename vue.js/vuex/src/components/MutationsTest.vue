@@ -30,11 +30,13 @@
                 //last_name: this.last_name,
                 //email: this.email
            // })
-            this.$store.dispatch('storeUser', {
+           this.$store.dispatch('storeUser', {
                 first_name: this.first_name,
                 last_name: this.last_name,
                 email: this.email
-            })
+            }).then(() => {
+                console.log('Usuário armazenado com sucesso!');
+            });
 
         }
     }

@@ -41,12 +41,11 @@ import AppProduto from './AppProduto.vue';
     methods: {
         EnviarDados() { 
             this.mostrarVerCarrinho = true,
-            this.$store.commit('storeUser', {
+            this.$store.dispatch('storeUser', {
                 first_name: this.first_name,
                 last_name: this.last_name,
                 email: this.email
-            })
-           
+            })  
         },
         VerCarrinho() {
             this.mostrarCarrinho = true;
