@@ -1,15 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <MutationsTest />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MutationsTest from './components/MutationsTest.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MutationsTest
+  },
+  data() {
+    return {
+      $store: this.$store
+    }
+  },
+  created() {
+    //console.log(this.$store.state.user.first_name)
   }
 }
 </script>
