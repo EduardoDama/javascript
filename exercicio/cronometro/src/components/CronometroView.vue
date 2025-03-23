@@ -24,7 +24,6 @@
   maxlength="3" 
   inputmode="numeric" 
   pattern="[0-9]{3}">
-  {{ totalsegundos }}
 </div>
 
 <div id="botoes">
@@ -41,18 +40,25 @@ export default {
   name: 'HelloWorld',
   data() { 
     return {
-      horas: 0,          
-      minutos: 0,        
-      segundos: 0,  
-      milissegundos: 0,     
+      horas: String().padStart(2, '0'),          
+      minutos:  String().padStart(2, '0'),        
+      segundos:  String().padStart(2, '0'),  
+      milissegundos:  String().padStart(3, '0'),     
       totalsegundos: 0,  
       intervaloID: null, 
     }
+  },
+  created() {
+    window.addEventListener('keydown', this.Botaopressionado)
   },
 
   methods: {
     start() {
       if (this.intervaloID) return;
+        this.horas = Number(this.horas);
+        this.minutos = Number(this.minutos);
+        this.segundos = Number(this.segundos);
+        this.milissegundos = Number(this.milissegundos);  
 
         this.totalMilissegundos = 
         this.horas * 3600 * 1000 + 
@@ -70,14 +76,15 @@ export default {
         this.totalMilissegundos -= decorrido;
 
         if (this.totalMilissegundos <= 0) {
-          this.totalMilissegundos = 0;
-          this.stop();
+          this.totalMilissegundos = 30000;
         }
 
-        this.horas = Math.floor(this.totalMilissegundos / (3600 * 1000));
-        this.minutos = Math.floor((this.totalMilissegundos % (3600 * 1000)) / (60 * 1000));
-        this.segundos = Math.floor((this.totalMilissegundos % (60 * 1000)) / 1000);
-        this.milissegundos = this.totalMilissegundos % 1000;
+        this.horas = String(Math.floor(this.totalMilissegundos / (3600 * 1000))).padStart(2, '0')
+        this.minutos = String(Math.floor((this.totalMilissegundos % (3600 * 1000)) / (60 * 1000))).padStart(2, '0');
+        this.segundos = String(Math.floor((this.totalMilissegundos % (60 * 1000)) / 1000)).padStart(2, '0')
+        this.milissegundos = String(this.totalMilissegundos % 1000).padStart(3, '0')
+
+ 
       }, 10);
     },
 
@@ -88,16 +95,33 @@ export default {
     
     reset() {
       this.stop();
-      this.horas = 0;
-      this.minutos = 0;
-      this.segundos = 0;
-      this.milissegundos = 0;
+      this.horas = String().padStart(2, '0');
+      this.minutos = String().padStart(2, '0');
+      this.segundos = String().padStart(2, '0');
+      this.milissegundos = String().padStart(3, '0');
       this.totalsegundos = 0;
     },
     cheia() {
       document.documentElement.requestFullscreen()
       if (document.fullscreenElement) {
         document.exitFullscreen()
+      }
+    },
+    Botaopressionado(event){
+      console.log(event.key)
+      switch(event.key) {
+        case 'Enter':
+          this.start()
+          break
+        case ' ':
+          this.stop()
+          break
+        case 'r':
+          this.reset()
+          break
+        case 'f':
+          this.cheia()
+          break
       }
     }
   },
