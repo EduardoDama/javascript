@@ -43,46 +43,49 @@ methods: {
   
 <style>
 button[id="tcl="] {
-background-color: #ff9500; 
-grid-column: span 2;
+    background-color: #ff9500; 
+    grid-column: span 2;
 }
+
 button#tcl\+,
 button#tcl√,
 button#tclx²,
 button#tcl\-,
 button#tcl\*,
 button#tcl\÷ {
-background-color: #3460c0;
+    background-color: #3460c0;
 }
+
 button#tclC {
-background-color: #f32217;
+    background-color: #f32217;  
 }
+
 .teclado {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 0.5em;
-height: 75%;
-margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5em;
+    height: 75%;
+    margin-top: 2em;
 }
 
 .tecla {
-background-color: #495057;
-color: #ffffff;
-font-size: 1.5em;
-border: none;
-border-radius: 0.5em;
-padding: 0.5em;
-cursor: pointer;
-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-transition: background-color 0.2s ease;
+    background-color: #495057;
+    color: #ffffff;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s ease;
 }
 
 .tecla:hover {
-background-color: #6c757d;
+    background-color: #6c757d;
 }
 
 .tecla:active {
-background-color: #adb5bd;
-box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: #adb5bd;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 </style>
