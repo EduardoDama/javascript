@@ -129,26 +129,69 @@ export default {
 </script>
 
 <style scoped>
-span{
-  font-size: 10em;
+span {
+  /* Tamanho responsivo com limites mínimo e máximo */
+  font-size: clamp(2rem, 8vw, 10rem);
   color: red;
+  /* Espaçamento vertical relativo */
+  line-height: 0.8;
 }
 
-input{
-  width:2em;
+input {
+  width: 3ch;
+  max-width: 100%;
 
-  padding: 5px;
-  font-size: 10em;
+  font-size: clamp(3rem, 8vw, 11rem);
+  padding: 0.3rem;
   text-align: center;
-  border-style: none;
-  margin: 5px;
-  border-radius: 0.2em;
-}
-input#mili{
-  width: 2em;
-  font-size: 6em;
-  border: none;
+  border: 2px solid #ddd;
+  border-radius: 0.3em;
+  margin: 0.2rem;
 
+  -webkit-tap-highlight-color: transparent;
+}
+
+input#mili {
+  /* Ajuste proporcional para milissegundos */
+  width: 4ch;
+  font-size: clamp(1.5rem, 6vw, 8rem);
+  /* Mantendo a proporção com os outros campos */
+  margin-bottom: -0.5em;
+}
+
+/* Media Queries para ajustes específicos */
+@media (max-width: 768px) {
+  span {
+    font-size: clamp(1.5rem, 6vw, 8rem);
+  }
+  
+  input {
+    font-size: clamp(1.5rem, 6vw, 8rem);
+    width: 2.5ch;
+  }
+  
+  input#mili {
+    font-size: clamp(1rem, 4.5vw, 6rem);
+    width: 3.5ch;
+  }
+}
+
+@media (max-width: 480px) {
+  span {
+    font-size: clamp(1rem, 5vw, 6rem);
+    line-height: 0.7;
+  }
+  
+  input {
+    font-size: clamp(1rem, 5vw, 6rem);
+    width: 2ch;
+    padding: 0.2rem;
+  }
+  
+  input#mili {
+    font-size: clamp(0.8rem, 4vw, 5rem);
+    width: 3ch;
+  }
 }
 button{
   width: 4em;
