@@ -66,29 +66,36 @@ export default {
         this.segundos * 1000 + 
         this.milissegundos;
 
-      this.ultimoUpdate = Date.now(); 
-
-      this.intervaloID = setInterval(() => {
-        const agora = Date.now();
-        const decorrido = agora - this.ultimoUpdate;
-        this.ultimoUpdate = agora;
-
-        this.totalMilissegundos -= decorrido;
+        this.ultimoUpdate = Date.now(); 
 
         if (this.totalMilissegundos <= 0) {
-          this.totalMilissegundos = 30000;
-        }
+            this.totalMilissegundos = 30000;
+          }
 
-        this.horas = String(Math.floor(this.totalMilissegundos / (3600 * 1000))).padStart(2, '0')
-        this.minutos = String(Math.floor((this.totalMilissegundos % (3600 * 1000)) / (60 * 1000))).padStart(2, '0');
-        this.segundos = String(Math.floor((this.totalMilissegundos % (60 * 1000)) / 1000)).padStart(2, '0')
-        this.milissegundos = String(this.totalMilissegundos % 1000).padStart(3, '0')
+        this.intervaloID = setInterval(() => {
+          const agora = Date.now();
+          const decorrido = agora - this.ultimoUpdate;
+          this.ultimoUpdate = agora;
+
+          this.totalMilissegundos -= decorrido;
+
+          if (this.totalMilissegundos <= 0) {
+            this.milissegundos = 0
+            this.stop()
+          } else{
+            this.horas = String(Math.floor(this.totalMilissegundos / (3600 * 1000))).padStart(2, '0')
+            this.minutos = String(Math.floor((this.totalMilissegundos % (3600 * 1000)) / (60 * 1000))).padStart(2, '0');
+            this.segundos = String(Math.floor((this.totalMilissegundos % (60 * 1000)) / 1000)).padStart(2, '0')
+            this.milissegundos = String(this.totalMilissegundos % 1000).padStart(3, '0')
+          }
+
 
  
       }, 10);
     },
 
     stop() {
+      this.milissegundos = String().padStart(3, '0');
       clearInterval(this.intervaloID);
       this.intervaloID = null;
     },

@@ -1,10 +1,7 @@
 <template>
 
-  <VueRouter 
-    v-if="showAlert"
-    :variant="resposta"
-    :value="resposta === 'fail' ? 'Formulário não foi mandado' : 'formulário enviado com sucesso'" 
-    @close="close()" 
+  <mixingApp 
+
   />
 
  
@@ -12,12 +9,12 @@
 
 <script>
 
-import VueRouter from '@/components/VueRouter.vue';
+import mixingApp from '@/components/mixingApp.vue';
 
 export default {
   name: 'App',
   components: {
-    VueRouter
+    mixingApp
   },
   data(){
     return{
