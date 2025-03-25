@@ -1,23 +1,15 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <hooksApp v-if="ShowApp"/>
-  <button @click="ShowApp = !ShowApp">Mostrar APP</button>
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
-import { ref } from 'vue';
-import hooksApp from './components/hooksApp.vue'
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    hooksApp
-  },
-  setup() {
-    const ShowApp = ref(true)
-    return {
-      ShowApp
-    }
+    HelloWorld
   }
 }
 </script>
